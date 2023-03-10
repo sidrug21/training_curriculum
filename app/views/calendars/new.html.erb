@@ -1,0 +1,12 @@
+# File: app/views/calendars/new.html.erb
+<h1>New Plan</h1>
+
+<%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.label :plan %>
+  <%= f.text_field :plan %>
+
+  <%= f.submit 'Create' %>
+<% end %>
