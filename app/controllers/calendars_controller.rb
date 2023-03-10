@@ -12,16 +12,6 @@ class CalendarsController < ApplicationController
     redirect_to action: :index
   end
 
-  def create
-    @plan = Plan.new(plan_params)
-    if @plan.save
-      redirect_to calendars_path
-    else
-      render :new
-    end
-  end
-  
-
   private
 
   def plan_params
